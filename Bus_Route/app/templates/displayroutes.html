@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+	{% block content %}
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<header class="align-center">
+						<h1> This bus will go via  </h1>
+					</header>
+					
+                    <!-- Lists -->
+                    <div class="align-center">
+                        {% for place in result %}
+						<p>{% if place == dest %}
+							<strong>
+                                {{place | upper }}
+                            </strong>
+							{% else %}
+										 {{ place  | join('') | upper}}
+									{% endif %}
+									{% endfor %}
+						</p>
+                    </div>
+					
+			</section>
+	{% endblock %}
+
+		

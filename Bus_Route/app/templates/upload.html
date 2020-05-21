@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+	{% block content %}
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<header class="align-center">
+						<h1>Let's find that way! </h1>
+						<p> <i>Your route is just a capture away </i>  </p>
+					</header>
+
+					<!-- Content -->
+						<h2 id="content">Capture and Upload</h2>
+						<p> Capture the image of the bus board and upload it here.</p>
+						<br>
+						<p> We will let you know whether the bus <strong>stops </strong>
+							 at your destination or if you need to your <strong> way</strong> through. </p>
+							
+
+					<!-- Form -->
+						<form action="/findroute" method="POST" enctype="multipart/form-data">
+							<div class="row uniform">
+								<div class="row uniform">
+									<div class="9u 12u$(small)">
+										<label for="destination"> Where do you wish to go ? </label>
+										<input type="text" name="destination" id="destination" value="" placeholder="Your destination" required />
+									</div>
+									<div class="9u 12u$(small)">
+    									<label for="picture"> Upload Image of Bus board </label><br>
+										<input class="9u 12u$(small)" type="file" style="visibility:initial" id="image" name="image" placeholder="Select image" required>
+                                    </div>
+									<div class="9u 12u$(small)">
+										<input type="submit" value="Find" class="fit" />
+									</div>
+								</div>
+							</div>
+							<hr>
+							<div >
+								{% with messages = get_flashed_messages(with_categories=true) %}
+								{% if messages %}
+						
+								{% for category, message in messages %}
+								<div >
+									<span>{{message}}</span>
+								</div>
+								{% endfor %}
+						
+								{% endif %}
+								{% endwith %}
+							</div>
+						</form>
+			</section>
+	
+	{% endblock %}
+		

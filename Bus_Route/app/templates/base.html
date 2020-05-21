@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Bus Route Navigator</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    </head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<nav class="left">
+					<a href="#menu"><span>Menu</span></a>
+				</nav>
+				<a href="{{ url_for('home')}}" class="logo">FindmyBus</a>
+			</header>
+
+		<!-- Menu -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="{{ url_for('home') }}">Home</a></li>
+					<li><a href="{{ url_for('upload') }}">Find Route</a></li>
+					<li><a href="{{ url_for('about') }}">About</a></li>
+				</ul>
+            </nav>
+            
+            {% block content%}
+            {% endblock %}
+            
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<h2>Get In Touch</h2>
+					<ul class="actions">
+						<li><span class="icon fa-phone"></span> <a href="#">(91) 8547742204</a></li>
+						<li><span class="icon fa-envelope"></span> <a href="#">busroutefinder@bts.in</a></li>
+						<li><span class="icon fa-map-marker"></span> Sree Chitra Thirunal College of Engineering, Pappanamcode, Thiruvananthapuram </li>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; Bus Route Navigator 2020  SCTCE
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+		<script src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
+		<script src="{{ url_for('static', filename='js/jquery.scrolly.min.js')}}"></script>
+		<script src="{{ url_for('static', filename='js/skel.min.js')}}"></script>
+		<script src="{{ url_for('static', filename='js/util.js')}}"></script>
+		<script src="{{ url_for('static', filename='js/main.js')}}"></script>
+
+	</body>
+</html>

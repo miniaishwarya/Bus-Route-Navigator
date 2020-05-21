@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+		{% block content %}
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="content">
+					<h1>Hello! </h1>
+					<p>Do you seem lost in your way? <br />Well, you have come to the right place! </p>
+					<p> We will find the bus that you are searching for. </p>
+					<ul class="actions">
+						<li><a href="{{url_for('upload')}}" class="button scrolly">Find my way! </a></li>
+					</ul>
+				</div>
+			</section>
+		
+		
+		<!-- One -->
+			<section id="two" class="wrapper style1 special">
+				<div class="inner">
+					<h2> Our service</h2>
+					<figure>
+					    <h4>
+							We aim to help you in navigating through Thiruvananthapuram city seamlessly using the
+							Kerala State Road Transport Corporation mainly for bus transport service. 
+						</h4>
+					</figure>
+				</div>
+			</section>
+
+        <!-- Two -->
+            <section id="three" class="wrapper">
+                <div class="inner flex flex-3">
+                    <div class="image fit">
+                        <div class="content">
+                            <h3>Kerala State Road Transport Corporation</h3>
+                            <p>KSRTC, the fond name for Kerala State Road Transport Corporation, connects the state well on road. As one of the oldest operated and managed public transports of India. </p>
+                    <br>
+                            <p>
+                                <a href="https://www.keralartc.com/main.html">Click here to visit their official website </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+			</section>
+			
+		{% endblock %}

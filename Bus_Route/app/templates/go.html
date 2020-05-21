@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+	{% block content %}
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<header class="align-center">
+                        <h1>  Yep, this bus will <b>definitely</b> go via your destination. </h1>
+                        <h2> Hop on !</h2>
+                    </header>
+                    <div>
+                        <div class="align-center">
+                            <ul class="actions">
+                                <form action="/findroute/displayroutes">
+                                    <input type="submit" value="Show me the route" class="fit" />
+                                </form>
+                               <li><a href="{{ url_for('home') }}" class="button alt">I'll manage</a></li>
+                            </ul>
+                        </div>
+                    </div>
+			</section>
+	
+	{% endblock %}
+		

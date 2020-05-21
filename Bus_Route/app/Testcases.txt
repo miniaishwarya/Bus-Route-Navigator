@@ -1,0 +1,121 @@
+General Cases:
+    Case 1: Could not extract words from image
+        Output: Route_obtained list empty. Could not obtain routes from image.
+        What could be done: Provide knowledge to user based on his Location and Destination
+
+Custom Cases: 
+    Case 1:0.0
+        Input: Routes obtained list empty, Destination, Location
+        Output: Route_obtained list empty. Could not obtain routes from image.
+        Conlusion: Cannot proceed further.
+        What could be done: Provide knowledge to user based on his Location and Destination
+
+    Case 2: 3.29
+        Input: Destination empty, Routes obtained list, Location
+        Output: Display all routes
+
+    Case 3: 3.34
+        Input: Location empty, Routes obtained list, Destination
+        go to Case Location 1
+        --Output: Display all routes
+
+    Case 4: 3.39
+        Input: Routes obtained list is not empty, Destination empty, Location empty
+        Output: Display all routes
+
+    ..Case 5: 3.27
+        Input: Routes obtained list is not empty, Destination empty, Location not empty
+        Conlusion: Cannot proceed further.
+        What could be done: Get Destination or Route_obtained 
+
+    Case 6: 0.0
+        Input: Routes obtained list empty, Destination not empty, Location not empty
+        Output: Route_obtained list empty. Could not obtain routes from image.
+        Conlusion: Cannot proceed further.
+        What could be done: Provide knowledge to user based on his Location and Destination
+
+    Case 7: 0.0
+        Input: Routes obtained list empty, Destination empty, Location not empty
+        Output: Route_obtained list empty. Could not obtain routes from image.
+        Conlusion: Cannot proceed further.
+        What could be done: Provide knowledge to user based on his Location and Destination
+
+    Case 8: 
+        Input: Routes obtained list empty, Destination empty, Location empty
+        Output: Route_obtained list empty. Could not obtain routes from image.
+        Conlusion: Cannot proceed further.
+        What could be done: Provide knowledge to user based on his Location and Destination
+
+    Case 9: 
+        Input: Routes obtained list, Destination, Location
+        goto Case Routes obtained, Case Location and Case Destination
+
+    ---------------------------------------------------------------------------------------------
+
+    Case Routes obtained
+0.00
+        Case 1: Routes obtained list has only one element
+            Output: Cannot proceed further
+            Conlusion: Cannot proceed further
+            What could be done: Provide knowledge to the user based on destination and location
+        0.00
+            Case 1.1: Routes obtained list has only one element and that element is not in routemap
+                Output: Locations obtained from the image is not in routemap
+                Conlusion: Cannot proceed further
+                What could be done: Provide knowledge to the user based on destination and location
+
+        Case 2: Routes obtained list has two elements
+            goto Case Destination and Case Location
+            --Output: Display all routes based on destination and location
+0.00
+        Case 3: Routes obtained list has more than two elements
+            goto Case Destination and Case Location
+            --Output: Display all routes based on destination and location
+
+        Case 4: Routes obtained list not in routemap
+            Output: Locations obtained from the image is not in routemap.
+
+    -----------------------------------------------------------------------------------------------
+    Case Destination
+3.56
+        Case 1: Destination in routemap but location is empty
+            goto Case Location 1
+            --Output: Display all routes
+3.35
+        Case 2: Destination not in routemap but location is empty
+            Output: Destination not in routemap
+3.42
+        Case 3: Destination in routemap but location not empty
+            goto Case Location 2, 3, 4, 5
+            --Output: Location from user's location to default destination (user entered destination
+                    included)
+3.49
+        Case 4: Destination in routemap but location is not empty
+            Output: Please take another(opposite) bus stop
+
+        
+    ------------------------------------------------------------------------------------------------
+    Case Location: 
+3.47
+        Case 1: Only Location empty
+            Output: Display all routes
+3.45
+        Case 2: Location in routemap and desired destination present in chartered route
+            Output: Display location from user's location to default destination (user entered destination
+                included)
+3.65
+        Case 3: Location in routemap but desired destination is not present in the chartered route
+            Output: Please take another bus stop.  
+4.37
+        Case 4: Location not in routemap
+            Output : This bus does not go through your desired destination. 
+                    Please find another bus. 
+
+        Case 5: Location inaccurate ( GPS accuracy low)
+            What could be done: Improve GPS accuracy
+        
+
+
+
+
+

@@ -1,0 +1,15 @@
+1. This is HTTP GET request of image that is only loaded, destination is empty and location is empty- 
+    GET /home/go?filename=image1.jpeg&dest=&loc=
+
+POST /home
+
+
+2. Homepage - GET /home
+3. working image with destination
+4. GET /home/go?filename=board2.jpeg&dest=karamana&loc= 
+
+5. GET /home/go?filename=board2.jpeg&dest=&loc=
+
+6. GET /home/nogo?result=%0A+Route_obtained+list+empty.+Could+not+obtain+routes+from+image.+
+
+7. GET /home 
