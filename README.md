@@ -1,5 +1,5 @@
 # Bus-Route-Navigator
-This is a simple mobile application that lets city dwellers to navigate across the Trivandrum city using KSRTC bus service. 
+This is a simple mobile application that lets city dwellers to navigate across the Trivandrum city KSRTC bus service. 
 
 Final Year Academic Project 2020
 
